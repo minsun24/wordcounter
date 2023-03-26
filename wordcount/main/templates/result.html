@@ -1,0 +1,52 @@
+{% comment %} {% load static %} {% endcomment %}
+<html>
+  <head>
+{% comment %} <link rel="stylesheet" type = "text/css" href="{% static "css/style.css" %}"> {% endcomment %}
+</head>
+<body>
+  <h1>Result</h1>
+  <div class= "text">
+    <p><strong>공백 포함 글자수</strong> : {{text_with_blank}} &nbsp; <strong>공백 제외 글자수</strong> : {{text_without_blank}}</br></p>
+    <hr>
+    <p><strong>총 단어 개수</strong> : {{total}}</p>
+    <p>
+    {% for word, value in words %}
+    {{word}} count : {{value}}
+    </br>
+    {% endfor %}
+    </p>
+  </div>
+  <a href = {% url 'main' %}> to main </a> 
+</body>
+<style>
+  body{
+    background-color:#FCF6F5;
+    text-align:center;
+    margin: 3rem auto;
+  }
+  h1{
+    margin-top: 4rem;
+    font-size: 4rem;
+    color: #2BAE66;
+  }
+  a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #FCF6F5;
+    background-color:  #2BAE66;
+    padding: 0.4rem;
+    border-radius: 0.7rem;
+    margin: 2rem auto;
+  }
+  .text{
+    background-color: #ffffff;
+    padding: 3rem;
+    border: #2BAE66 solid 0.2rem;
+    border-radius: 3rem;
+    margin: 0 auto 2rem auto;
+    width: 400px;
+  }
+
+</style>
+
+</html>

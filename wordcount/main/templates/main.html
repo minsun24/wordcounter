@@ -1,0 +1,44 @@
+<body>
+  <h1>Wordcount</h1>
+  <form action={% url 'result' %} method='GET'>
+    <textarea name='text' placeholder="문장을 입력한 후 count 버튼을 눌러주세요." 
+    style="width:500px; height: 300px;"></textarea> 
+    <br>
+    <button type="submit" style="margin:1rem auto;" > count </button>
+  </form>
+
+  <a href = {% url 'about' %}>about</a>
+</body>
+
+<style>
+  body{
+    background-color:#FCF6F5;
+    text-align:center;
+  }
+  h1{
+    margin-top: 4rem;
+    font-size: 4rem;
+    color: #2BAE66;
+  }
+  button{
+    font-size: 1.5em;
+    
+  }
+  a{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #FCF6F5;
+    background-color:  #2BAE66;
+    padding: 0.4rem;
+    border-radius: 0.7rem;
+  }
+  .result{
+    background-color: #ffffff;
+    padding: 3rem;
+    border: #2BAE66 solid 0.2rem;
+    border-radius: 3rem;
+    margin: 0 auto 2rem auto;
+    width: max-content;
+  }
+
+</style>
