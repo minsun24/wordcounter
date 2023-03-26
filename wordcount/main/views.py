@@ -3,7 +3,7 @@ from django.shortcuts import render
 # Create your views here.
 #메인 홈
 def main(request):
-  return render(request, 'main.html')
+  return render(request, 'index.html')
 # 소개 페이지 
 def about(request):
   return render(request,'about.html')
